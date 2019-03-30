@@ -1,3 +1,9 @@
-FROM perl
+FROM node
 
-CMD ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+ADD package.json yarn.lock ./
+
+RUN yarn
+
+ADD index.js
+
+CMD ["node",  "index.js"]
