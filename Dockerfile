@@ -4,6 +4,6 @@ ADD package.json yarn.lock ./
 
 RUN yarn
 
-ADD index.js
+ADD index.js ./
 
 CMD ["node",  "index.js"]
